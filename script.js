@@ -201,20 +201,36 @@ function loadSectionContent(sectionId) {
           `;
             break;
           case "heading":
-            const headingId = section.content
+            // Compute a stable id from the plain text content (strip markup)
+            const rawTextForId = String(section.content).replace(
+              /<[^>]*>/g,
+              ""
+            );
+            const headingId = rawTextForId
               .toLowerCase()
               .replace(/[^a-z0-9]+/g, "-")
               .replace(/^-|-$/g, "");
+
+            // If the section requests a highlighted heading, wrap the plain text
+            // in a semantic <mark> (our parseMarkdown preserves <mark>)
+            const headingContentRaw = section.highlight
+              ? `<mark class="company-managed-highlight">${section.content}</mark>`
+              : section.content;
+
             sectionHtml = `<h${
               section.level
             } class="content-heading" id="${headingId}">${parseMarkdown(
-              section.content
+              headingContentRaw
             )}</h${section.level}>`;
             break;
           case "text":
             sectionHtml = `<div class="text-content"><p>${parseMarkdown(
               section.content
             )}</p></div>`;
+            break;
+          case "html":
+            // Inject raw HTML without escaping so complex markup (callouts/SVG) renders
+            sectionHtml = section.content;
             break;
           case "objectives-banner":
             sectionHtml = `
@@ -1157,7 +1173,9 @@ function addContentRevealAnimation() {
   );
 
   document
-    .querySelectorAll(".text-content, .content-list, .info-box, .warning-box")
+    .querySelectorAll(
+      ".text-content, .content-list, .info-box, .warning-box, .info-note"
+    )
     .forEach((el) => {
       observer.observe(el);
     });
@@ -1244,8 +1262,31 @@ function escapeHtml(str) {
 
 // Parse simple markdown bold syntax (**text** -> <strong>text</strong>)
 function parseMarkdown(str) {
-  // First escape HTML
-  let escaped = escapeHtml(str);
+  // Allow a safe, limited set of raw HTML tags (only <mark ...>...</mark>)
+  // by preserving them before escaping and restoring them after.
+  const preservedOpen = [];
+
+  // Replace opening <mark ...> tags with placeholders and save attributes
+  let tmp = String(str).replace(/<mark\b([^>]*)>/gi, function (_, attrs) {
+    const idx = preservedOpen.length;
+    preservedOpen.push(attrs || "");
+    return `@@MARK_OPEN_${idx}@@`;
+  });
+
+  // Replace closing tags with a generic placeholder
+  tmp = tmp.replace(/<\/mark>/gi, "@@MARK_CLOSE@@");
+
+  // Escape the rest of the string (safe)
+  let escaped = escapeHtml(tmp);
+
+  // Restore preserved opening <mark> tags (unescaped) with their attributes
+  preservedOpen.forEach((attrs, i) => {
+    escaped = escaped.replace(`@@MARK_OPEN_${i}@@`, `<mark${attrs}>`);
+  });
+
+  // Restore closing tags
+  escaped = escaped.replace(/@@MARK_CLOSE@@/g, "</mark>");
+
   // Then convert **text** to <strong>text</strong>
   return escaped.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
 }

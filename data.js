@@ -578,6 +578,133 @@ console.log('Ahoy, changelog!', histories.length);
     description:
       "This document outlines the core capabilities and technical strengths of the Issue Change Log application, providing detailed insights into its features, performance, and security architecture.",
     sections: [
+      {
+        type: "objectives-banner",
+        pageTitle: "Features and Capabilities",
+        subtitle:
+          "This document outlines the core capabilities and technical strengths of the Issue Change Log application.",
+        title: "Highlights",
+        items: [
+          "Enterprise-grade access control and centralized authorization",
+          "Comprehensive change tracking for fields, comments and attachments",
+          "CSV export and time-based filtering for reporting",
+        ],
+      },
+      // Permission Control heading and description (placed directly beneath the yellow objectives banner)
+      {
+        type: "heading",
+        level: 2,
+        content: "Permission Control",
+      },
+      {
+        type: "text",
+        content:
+          'Issue Change Log uses a <mark class="company-managed-highlight">two-level access model</mark> for better security and flexibility. At the **site level**, **Jira administrators** authorize which projects can use the app through Jira Settings → Apps → Issue Change Log Settings. At the **project level**, **project administrators** can then enable or disable the app for their specific project. Once enabled, all users with access to the project can view the issue change logs.',
+      },
+      // Permission-control screenshots (project and issue-panel images follow)
+      {
+        type: "heading",
+        level: 3,
+        content: "Site Administrator Configuration",
+        className: "no-divider spaced-above",
+      },
+      {
+        type: "text",
+        content:
+          "The Site Administrator Configuration panel allows Jira site administrators to control which projects can access the Issue Change Log app. It represents the first level of a two-tier access control system—site administrators authorize projects, while project administrators manage app enablement within their own projects.",
+      },
+      {
+        type: "image",
+        src: "jira-admin-2.png",
+        alt: "Site administration - authorize projects screenshot",
+        caption:
+          "Site admin authorization — authorize or bulk-manage projects for the Issue Change Log app from the Issue Change Log Settings page.",
+        description:
+          "This screenshot shows the site administration 'Issue Change Log Settings' page where a Jira administrator can search, select, and authorize projects for the app. The list displays project keys and names with checkboxes for bulk selection, alongside controls to add or remove projects and a summary of currently authorized projects, enabling centralized and auditable management of which projects may use the Issue Change Log.",
+      },
+      {
+        type: "heading",
+        level: 3,
+        content: "Features and Navigation",
+      },
+      {
+        type: "text",
+        content:
+          "Navigate to Jira Settings → Apps → Issue Change Log → Site Administrator Configuration.",
+      },
+      {
+        type: "list",
+        items: [
+          "The panel displays all projects with their names and keys.",
+          "Use the Smart Search bar to quickly find specific projects.",
+          "Select projects individually or use Select All for bulk authorization.",
+          "Review the real-time count of selected projects.",
+          "Click Add [X] Projects to authorize or Clear Selection to reset.",
+          "Once authorized, project administrators can enable or disable the app from their Project Settings.",
+        ],
+      },
+      {
+        type: "html",
+        content: `
+        <div class="info-note">
+          <div class="info-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" fill="currentColor" />
+              <rect x="11" y="10" width="2" height="7" rx="1" fill="#FFFFFF"></rect>
+              <circle cx="12" cy="8" r="1" fill="#FFFFFF"></circle>
+            </svg>
+          </div>
+          <div class="info-text">
+            <p>
+              Note: Only Jira site administrators can access and configure this panel. Without site-level authorization, the Issue Change Log app will not appear in the project’s Issue panel.
+            </p>
+          </div>
+        </div>
+        `,
+      },
+      {
+        type: "image",
+        src: "jira-admin-1.png",
+        alt: "Site administration - permissions screenshot",
+        caption:
+          "Site admin settings — permissions and access control overview.",
+        description:
+          "Screenshot showing the Permission Control area and available admin controls for authorizing projects and managing access.",
+      },
+      {
+        type: "image",
+        src: "project-settings-1.png",
+        alt: "Project settings screenshot (authorized view)",
+        caption:
+          "Authorized & enabled — project authorized by a site admin and enabled by project admin.",
+      },
+      {
+        type: "image",
+        src: "project-settings-2.png",
+        alt: "Project settings screenshot (not authorized view)",
+        caption:
+          "Not authorized — this project has not been authorized for the app; request access from a site administrator.",
+      },
+      { type: "heading", level: 2, content: "Issue Panel" },
+      {
+        type: "text",
+        content:
+          "The Issue Panel displays the app's availability state for a given issue. Below are screenshots showing the disabled and enabled states as they appear to end users and project admins.",
+      },
+      {
+        type: "image",
+        src: "issue-panel-1.png",
+        alt: "Issue panel - app disabled view",
+        caption:
+          "Issue panel when app is disabled for the project; instructs users to contact project admins to enable the app.",
+      },
+      {
+        type: "image",
+        src: "issue-panel-2.png",
+        alt: "Issue panel - app enabled view",
+        caption:
+          "Issue panel when the app is enabled — shows changelog content and export tools for authorized projects.",
+      },
       { type: "heading", level: 2, content: "Core Features" },
       { type: "heading", level: 3, content: "Comprehensive Change Tracking" },
       {
@@ -1164,6 +1291,17 @@ console.log('Ahoy, changelog!', histories.length);
     description:
       "How to configure site-level permissions, project enablement and optional feature flags for the app.",
     sections: [
+      { type: "image", src: "Admin-2.png", alt: "Admin settings screenshot" },
+      {
+        type: "image",
+        src: "jira admin-1.png",
+        alt: "Jira admin panel screenshot",
+      },
+      {
+        type: "image",
+        src: "pro admin-1.png",
+        alt: "Project admin settings screenshot",
+      },
       { type: "heading", level: 2, content: "Site-Level Authorization" },
       {
         type: "text",
