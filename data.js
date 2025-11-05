@@ -693,7 +693,7 @@ console.log('Ahoy, changelog!', histories.length);
       },
       {
         type: "image",
-        src: "project-settings-1.png",
+        src: "Project-settings-1.png",
         alt: "Project settings screenshot (authorized view)",
         caption:
           "Authorized & enabled — project authorized by a site admin and enabled by project admin.",
