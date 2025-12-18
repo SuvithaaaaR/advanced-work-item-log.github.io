@@ -1376,24 +1376,30 @@ console.log('Ahoy, changelog!', histories.length);
     ],
     title: "Installation Guide",
     description:
-      "Step-by-step instructions to install Issue Change Log from the Atlassian Marketplace for Jira Cloud. No CLI required.",
+      "This guide will walk you through the complete installation process for the Issue Change Log app.",
     sections: [
       { type: "heading", level: 2, content: "Prerequisites" },
+      {
+        type: "text",
+        content: "Before installing the Issue Change Log app, ensure you have:",
+      },
       { type: "heading", level: 3, content: "System Requirements" },
       {
-        type: "list",
-        items: [
-          "Active Jira Cloud instance",
-          "Jira administrator (site admin) privileges for installation",
-        ],
+        type: "html",
+        content: `
+          <ul class="tab-item-benefits">
+            <li>✅ Active Jira Cloud instance</li>
+            <li>✅ Jira administrator privileges (for installation and initial setup)</li>
+          </ul>
+        `,
       },
       { type: "heading", level: 3, content: "User Permissions" },
       {
         type: "list",
         items: [
-          "Installation: Jira administrator or site administrator role",
-          "Site configuration: Member of site-admins, jira-administrators, or administrators",
-          "Project configuration: Project administrator role",
+          "<strong>For Installation:</strong> site administrator role or org admin role",
+          "<strong>For Site Configuration:</strong> Member of the site-admins, jira-administrators, or the administrators group",
+          "<strong>For Project Configuration:</strong> Project administrator role for specific projects",
         ],
       },
       { type: "heading", level: 3, content: "Browser Requirements" },
@@ -1405,213 +1411,79 @@ console.log('Ahoy, changelog!', histories.length);
       {
         type: "heading",
         level: 2,
-        content: "Install from Atlassian Marketplace (Recommended)",
-      },
-      { type: "heading", level: 3, content: "Step 1: Navigate to Marketplace" },
-      {
-        type: "text",
         content:
-          "Go to https://marketplace.atlassian.com and sign in with your Atlassian account.",
-      },
-      { type: "heading", level: 3, content: "Step 2: Search for the App" },
-      {
-        type: "text",
-        content:
-          'Search for "Issue Change Log" and open the app listing to view details.',
-      },
-      { type: "heading", level: 3, content: "Step 3: Install the App" },
-      {
-        type: "text",
-        content:
-          'Click "Get it now" or "Try it free", select your Jira Cloud site, then click "Install app".',
-      },
-      { type: "heading", level: 3, content: "Step 4: Grant Permissions" },
-      {
-        type: "list",
-        items: [
-          "read:jira-work — read Jira issues and projects",
-          "read:jira-user — read user information",
-          "storage:app — store app configuration data",
-        ],
-      },
-      { type: "heading", level: 3, content: "Step 5: Confirm Installation" },
-      {
-        type: "text",
-        content:
-          "Wait for the installation to complete. A success message confirms the app is installed.",
-      },
-
-      { type: "heading", level: 2, content: "Post-Installation Setup" },
-      { type: "heading", level: 3, content: "Step 1: Verify Installation" },
-      {
-        type: "list",
-        items: [
-          'Open any Jira issue and look for the "Issue Changelog" panel on the right',
-          "Seeing an access restriction message is expected before configuration",
-        ],
+          "Installation Method: Install from Atlassian Marketplace (Recommended)",
       },
       {
         type: "heading",
         level: 3,
-        content: "Step 2: Initial Site Configuration (Admins)",
+        content: "Navigate to Atlassian Marketplace",
       },
-      {
-        type: "list",
-        items: [
-          "Go to Jira Settings → Apps → Manage apps",
-          'Find "Issue Change Log" and open "Issue Change Log Settings"',
-          "Authorize projects by selecting them individually or using Select All",
-          "Confirm authorized projects appear in the Currently Allowed Projects table",
-        ],
-      },
-      {
-        type: "heading",
-        level: 3,
-        content: "Step 3: Project-Level Configuration (Project Admins)",
-      },
-      {
-        type: "list",
-        items: [
-          "Project Settings → Apps → Issue Change Log",
-          "Toggle Enable Issue Change Log for this project (enabled by default if authorized)",
-        ],
-      },
-      { type: "heading", level: 3, content: "Step 4: Test the Installation" },
-      {
-        type: "list",
-        items: [
-          "Open an issue in an authorized, enabled project",
-          "Confirm change history appears and filters (24h, 7d, 30d…) work",
-          "Try Export → CSV",
-        ],
-      },
-
-      { type: "heading", level: 2, content: "Verification Checklist" },
-      {
-        type: "list",
-        items: [
-          "App appears in Jira Manage apps",
-          "Issue Changelog panel visible in issue view",
-          "Admin settings page accessible to administrators",
-          "Project settings page accessible to project admins",
-          "Access control working correctly",
-          "Change logs displaying for authorized projects",
-          "CSV export working",
-          "Time filters operating correctly",
-        ],
-      },
-
-      {
-        type: "heading",
-        level: 2,
-        content: "Troubleshooting Installation Issues",
-      },
-      {
-        type: "heading",
-        level: 3,
-        content: 'Issue: "App not appearing in issue panel"',
-      },
-      {
-        type: "list",
-        items: [
-          "Hard-refresh the browser (Ctrl+F5 or Cmd+Shift+R)",
-          "Clear browser cache",
-          "Verify the app is installed in Jira Settings → Apps → Manage apps",
-          "Ensure the project has been authorized by an administrator",
-        ],
-      },
-      { type: "heading", level: 3, content: 'Issue: "Permission denied"' },
-      {
-        type: "list",
-        items: [
-          "Confirm you have Jira administrator privileges",
-          "If actions fail, check with a site admin to verify your account permissions",
-        ],
-      },
-      {
-        type: "heading",
-        level: 3,
-        content: 'Issue: "App installed but access denied for all projects"',
-      },
-      {
-        type: "list",
-        items: [
-          "This is expected until projects are explicitly authorized",
-          "Use the admin settings page to add projects and verify they appear in the allowed list",
-        ],
-      },
-      {
-        type: "heading",
-        level: 3,
-        content: 'Issue: "Cannot access admin settings"',
-      },
-      {
-        type: "list",
-        items: [
-          "Verify membership in site-admins, jira-administrators, or administrators",
-          "Ask a site admin to grant access if needed",
-        ],
-      },
-
-      { type: "heading", level: 2, content: "Uninstallation" },
-      { type: "heading", level: 3, content: "Via Jira UI" },
-      {
-        type: "list",
-        items: [
-          "Jira Settings → Apps → Manage apps",
-          'Find "Issue Change Log" and click Uninstall',
-          "Confirm the uninstallation",
-        ],
-      },
-
-      {
-        type: "heading",
-        level: 2,
-        content: "Data Retention After Uninstallation",
-      },
-      {
-        type: "list",
-        items: [
-          "Jira data: Not affected (the app reads Jira data only)",
-          "App configuration: Removed (authorized project lists are deleted)",
-          "No external data: Nothing stored outside Jira/Forge",
-        ],
-      },
-
-      { type: "heading", level: 2, content: "Upgrading the App" },
-      { type: "heading", level: 3, content: "From Marketplace" },
       {
         type: "text",
         content:
-          "Updates are delivered automatically when installed from the Marketplace; you’ll be notified of changes.",
+          "Go to <a href='https://marketplace.atlassian.com' target='_blank'>Explore Marketplace solutions for Atlassian apps | Atlassian Marketplace</a>",
       },
-
-      { type: "heading", level: 2, content: "Support" },
       {
         type: "text",
-        content:
-          "For installation assistance, see Support and Contact Information.",
+        content: "Sign in with your Atlassian account",
+      },
+      { type: "heading", level: 3, content: "Search for the App" },
+      {
+        type: "text",
+        content: 'Search for "Issue Change Log" in the marketplace',
+      },
+      {
+        type: "text",
+        content: "Click on the app to view details",
+      },
+      { type: "heading", level: 3, content: "Install the App" },
+      {
+        type: "text",
+        content: 'Click the "Get it now" or "Try it free" button',
+      },
+      {
+        type: "text",
+        content: "Select your Jira Cloud site from the dropdown",
+      },
+      {
+        type: "text",
+        content: 'Click "Install app"',
+      },
+      { type: "heading", level: 3, content: "Grant Permissions" },
+      {
+        type: "text",
+        content: "Review the requested permissions:",
+      },
+      {
+        type: "list",
+        items: [
+          "<code>read:jira-work</code> - Read Jira issues and projects",
+          "<code>read:jira-user</code> - Read user information",
+          "<code>storage:app</code> - Store app configuration data",
+        ],
+      },
+      {
+        type: "text",
+        content: 'Click "Grant access"',
+      },
+      { type: "heading", level: 3, content: "Confirm Installation" },
+      {
+        type: "text",
+        content: "Wait for the installation to complete",
+      },
+      {
+        type: "text",
+        content: "You'll see a success message when the app is installed",
       },
     ],
     tableOfContents: [
       { title: "Prerequisites", anchor: "#prerequisites" },
       {
-        title: "Install from Atlassian Marketplace (Recommended)",
-        anchor: "#install-from-atlassian-marketplace-recommended",
+        title: "Installation Method",
+        anchor:
+          "#installation-method-install-from-atlassian-marketplace-recommended",
       },
-      { title: "Post-Installation Setup", anchor: "#post-installation-setup" },
-      { title: "Verification Checklist", anchor: "#verification-checklist" },
-      {
-        title: "Troubleshooting Installation Issues",
-        anchor: "#troubleshooting-installation-issues",
-      },
-      { title: "Uninstallation", anchor: "#uninstallation" },
-      {
-        title: "Data Retention After Uninstallation",
-        anchor: "#data-retention-after-uninstallation",
-      },
-      { title: "Upgrading the App", anchor: "#upgrading-the-app" },
-      { title: "Support", anchor: "#support" },
     ],
     navigation: {
       previous: { title: "Features and Capabilities", target: "features" },
