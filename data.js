@@ -3,7 +3,7 @@ const navigationData = {
   sections: [
     {
       id: "issue-changelog",
-      title: "Issue Changelog",
+      title: "Advanced Work Item Log",
       expanded: true,
       items: [],
     },
@@ -76,23 +76,20 @@ const navigationData = {
       expanded: false,
       items: [],
     },
-    { id: "privacy", title: "Privacy Policy", expanded: false, items: [] },
   ],
 };
 
 // Header navigation links (array expected by script.js)
-const headerNav = [
-  { title: "Home", link: "#" },
-  { title: "Issue Change Log", link: "#" },
-];
+const headerNav = [];
 
 // Page metadata and version info
 const pageContent = {
-  title: "Issue Change Log Documentation",
-  subtitle: "Comprehensive guides and reference for the Issue Change Log app",
+  title: "Advanced Work Item Log Documentation",
+  subtitle:
+    "Comprehensive guides and reference for the Advanced Work Item Log app",
 };
 const headerInfo = {
-  title: "Issue Change Log",
+  title: "Advanced Work Item Log",
   versions: ["1.2.15"],
   defaultVersion: "1.2.15",
 };
@@ -102,7 +99,7 @@ const sectionContents = {
   "issue-changelog": {
     layout: "hero",
     hero: {
-      title: "Issue Changelog",
+      title: "Advanced Work Item Log",
       subtitle:
         "Send complete issue history to your team with one click — fields, comments, attachments, and transitions, all from Jira Cloud.",
       ctas: [
@@ -113,9 +110,9 @@ const sectionContents = {
       ],
       image: {
         src: "home img.png",
-        alt: "Issue Change Log panel screenshot",
+        alt: "Advanced Work Item Log panel screenshot",
         callouts: [
-           {
+          {
             number: 1,
             top: "12.5%",
             left: "92%",
@@ -159,18 +156,18 @@ console.log('Ahoy, changelog!', histories.length);
       },
     },
     breadcrumbs: [
-      { title: "Issue Change Log", link: "#" },
-      { title: "Issue Changelog", link: "#" },
+      { title: "Advanced Work Item Log", link: "#" },
+      { title: "Advanced Work Item Log", link: "#" },
     ],
-    title: "Issue Changelog",
+    title: "Advanced Work Item Log",
     description:
-      "Understand at a glance what the Issue Change Log app provides: full, filterable change history for Jira issues with secure access and export.",
+      "Understand at a glance what the Advanced Work Item Log app provides: full, filterable change history for Jira issues with secure access and export.",
     sections: [
       { type: "heading", level: 2, content: "Overview" },
       {
         type: "text",
         content:
-          "Issue Change Log surfaces a **chronological, detailed history** of all activity within Jira issues — including **field updates**, **comment edits**, **attachments**, and **status transitions** — while fully respecting **Jira permissions** and **visibility rules**.",
+          "Advanced Work Item Log surfaces a **chronological, detailed history** of all activity within Jira issues — including **field updates**, **comment edits**, **attachments**, and **status transitions** — while fully respecting **Jira permissions** and **visibility rules**.",
       },
       {
         type: "text",
@@ -202,13 +199,13 @@ console.log('Ahoy, changelog!', histories.length);
 
   "troubleshooting-document-creation": {
     breadcrumbs: [
-      { title: "Issue Change Log", link: "#" },
+      { title: "Advanced Work Item Log", link: "#" },
       { title: "Troubleshooting", link: "#" },
       { title: "App Not Appearing in Issue Panel", link: "#" },
     ],
     title: "App Not Appearing in Issue Panel",
     description:
-      "The Issue Change Log panel doesn't show up when viewing Jira issues.",
+      "The Advanced Work Item Log panel doesn't show up when viewing Jira issues.",
     sections: [
       { type: "heading", level: 2, content: "Common Causes" },
       {
@@ -228,7 +225,7 @@ console.log('Ahoy, changelog!', histories.length);
       {
         type: "text",
         content:
-          "Site administrators must authorize projects before the app can be used. Go to <strong>Jira Settings → Apps → Manage apps → Issue ChangeLog Settings</strong> and confirm your project is in the authorized list.",
+          "Site administrators must authorize projects before the app can be used. Go to <strong>Jira Settings → Apps → Manage apps → Advanced Work Item Log Settings</strong> and confirm your project is in the authorized list.",
       },
       {
         type: "image",
@@ -242,7 +239,7 @@ console.log('Ahoy, changelog!', histories.length);
       {
         type: "text",
         content:
-          "Project administrators must enable the app in <strong>Project Settings → Apps → Issue ChangeLog</strong>. Verify the toggle is set to 'Enabled'.",
+          "Project administrators must enable the app in <strong>Project Settings → Apps → Advanced Work Item Log</strong>. Verify the toggle is set to 'Enabled'.",
       },
       {
         type: "image",
@@ -287,13 +284,13 @@ console.log('Ahoy, changelog!', histories.length);
 
   "troubleshooting-saving-version": {
     breadcrumbs: [
-      { title: "Issue Change Log", link: "#" },
+      { title: "Advanced Work Item Log", link: "#" },
       { title: "Troubleshooting", link: "#" },
       { title: "Change Log Not Loading or Empty", link: "#" },
     ],
     title: "Change Log Not Loading or Empty",
     description:
-      "The Issue Change Log panel appears but shows no data or fails to load history.",
+      "The Advanced Work Item Log panel appears but shows no data or fails to load history.",
     sections: [
       { type: "heading", level: 2, content: "Common Causes" },
       {
@@ -373,7 +370,7 @@ console.log('Ahoy, changelog!', histories.length);
 
   "troubleshooting-page-group": {
     breadcrumbs: [
-      { title: "Issue Change Log", link: "#" },
+      { title: "Advanced Work Item Log", link: "#" },
       { title: "Troubleshooting", link: "#" },
       { title: "Performance Issues or Slow Loading", link: "#" },
     ],
@@ -458,7 +455,7 @@ console.log('Ahoy, changelog!', histories.length);
 
   "troubleshooting-content-display": {
     breadcrumbs: [
-      { title: "Issue Change Log", link: "#" },
+      { title: "Advanced Work Item Log", link: "#" },
       { title: "Troubleshooting", link: "#" },
       { title: "Changes Not Appearing or Missing History", link: "#" },
     ],
@@ -523,7 +520,7 @@ console.log('Ahoy, changelog!', histories.length);
       {
         type: "text",
         content:
-          "Remember: The Issue Change Log app displays data from Jira's native changelog API. If Jira doesn't record a change (due to automation rules, API calls without changelog flag, or permissions), the app cannot show it.",
+          "Remember: The Advanced Work Item Log app displays data from Jira's native changelog API. If Jira doesn't record a change (due to automation rules, API calls without changelog flag, or permissions), the app cannot show it.",
       },
     ],
     tableOfContents: [
@@ -539,7 +536,7 @@ console.log('Ahoy, changelog!', histories.length);
 
   "troubleshooting-license-data": {
     breadcrumbs: [
-      { title: "Issue Change Log", link: "#" },
+      { title: "Advanced Work Item Log", link: "#" },
       { title: "Troubleshooting", link: "#" },
       { title: "Installation or Update Issues", link: "#" },
     ],
@@ -612,7 +609,7 @@ console.log('Ahoy, changelog!', histories.length);
       {
         type: "text",
         content:
-          "Go to <strong>Jira Settings → Apps → Manage apps</strong>, find Issue ChangeLog, and click 'Update' if available. If update fails, try uninstalling and reinstalling (your configuration is preserved).",
+          "Go to <strong>Jira Settings → Apps → Manage apps</strong>, find Advanced Work Item Log, and click 'Update' if available. If update fails, try uninstalling and reinstalling (your configuration is preserved).",
       },
       {
         type: "text",
@@ -653,21 +650,21 @@ console.log('Ahoy, changelog!', histories.length);
   },
   "app-overview": {
     breadcrumbs: [
-      { title: "Issue Change Log", link: "#" },
+      { title: "Advanced Work Item Log", link: "#" },
       { title: "Get Started", link: "#" },
     ],
     title: "Get Started",
     description:
-      "Start here to understand what Issue Change Log is, its benefits, who it's for, and how to install and use it in Jira Cloud.",
+      "Start here to understand what Advanced Work Item Log is, its benefits, who it's for, and how to install and use it in Jira Cloud.",
     sections: [
       {
         type: "objectives-banner",
         pageTitle: "Get Started",
         subtitle:
-          "Start here to understand what Issue Change Log is, its benefits, who it's for, and how to install and use it in Jira Cloud.",
+          "Start here to understand what Advanced Work Item Log is, its benefits, who it's for, and how to install and use it in Jira Cloud.",
         title: "By the end of this guide, you'll be able to:",
         items: [
-          "Understand what Issue Change Log is and its key benefits",
+          "Understand what Advanced Work Item Log is and its key benefits",
           "Identify who can benefit from using this application",
           "Install and configure the app from the Atlassian Marketplace",
           "Navigate the core features and capabilities",
@@ -678,13 +675,13 @@ console.log('Ahoy, changelog!', histories.length);
       {
         type: "text",
         content:
-          "The Issue Change Log is an Atlassian Forge application designed for Jira that provides comprehensive tracking and visualization of all changes made to Jira issues. This application enables teams to maintain complete audit trails, monitor issue evolution, and enhance transparency in their project workflows.",
+          "The Advanced Work Item Log is an Atlassian Forge application designed for Jira that provides comprehensive tracking and visualization of all changes made to Jira issues. This application enables teams to maintain complete audit trails, monitor issue evolution, and enhance transparency in their project workflows.",
       },
-      { type: "heading", level: 2, content: "What is Issue Change Log?" },
+      { type: "heading", level: 2, content: "What is Advanced Work Item Log?" },
       {
         type: "text",
         content:
-          "Issue Change Log is a native Jira application that displays detailed change history for issues, including:",
+          "Advanced Work Item Log is a native Jira application that displays detailed change history for issues, including:",
       },
       {
         type: "list",
@@ -700,7 +697,7 @@ console.log('Ahoy, changelog!', histories.length);
       {
         type: "annotated-image",
         src: "home img.png",
-        alt: "Issue Change Log interface showing changelog table with filters, author columns, field content, date information, and export options",
+        alt: "Advanced Work Item Log interface showing changelog table with filters, author columns, field content, date information, and export options",
         annotations: [
           {
             number: "1",
@@ -862,7 +859,7 @@ console.log('Ahoy, changelog!', histories.length);
             label: "Target Audience",
             content: {
               intro:
-                "Here are the primary **audiences** who benefit from Issue Change Log:",
+                "Here are the primary **audiences** who benefit from Advanced Work Item Log:",
               items: [
                 {
                   title: "Development Teams",
@@ -892,7 +889,7 @@ console.log('Ahoy, changelog!', histories.length);
             label: "Use Cases",
             content: {
               intro:
-                "Here are some **key scenarios** where Issue Change Log adds value:",
+                "Here are some **key scenarios** where Advanced Work Item Log adds value:",
               items: [
                 {
                   title: "Audit and Compliance",
@@ -950,7 +947,7 @@ console.log('Ahoy, changelog!', histories.length);
     tableOfContents: [
       { title: "Introduction", anchor: "#introduction" },
       {
-        title: "What is Issue Change Log?",
+        title: "What is Advanced Work Item Log?",
         anchor: "#what-is-issue-change-log",
       },
       { title: "Key Benefits", anchor: "#key-benefits" },
@@ -959,25 +956,25 @@ console.log('Ahoy, changelog!', histories.length);
       { title: "How It Works", anchor: "#how-it-works" },
     ],
     navigation: {
-      previous: { title: "Issue Changelog", target: "issue-changelog" },
+      previous: { title: "Advanced Work Item Log", target: "issue-changelog" },
       next: { title: "Features and Capabilities", target: "features" },
     },
   },
 
   features: {
     breadcrumbs: [
-      { title: "Issue Change Log", link: "#" },
+      { title: "Advanced Work Item Log", link: "#" },
       { title: "Features", link: "#" },
     ],
     title: "Features and Capabilities",
     description:
-      "This document outlines the core capabilities and technical strengths of the Issue Change Log application, providing detailed insights into its features, performance, and security architecture.",
+      "This document outlines the core capabilities and technical strengths of the Advanced Work Item Log application, providing detailed insights into its features, performance, and security architecture.",
     sections: [
       {
         type: "objectives-banner",
         pageTitle: "Features and Capabilities",
         subtitle:
-          "This document outlines the core capabilities and technical strengths of the Issue Change Log application.",
+          "This document outlines the core capabilities and technical strengths of the Advanced Work Item Log application.",
         title: "Highlights",
         items: [
           "Enterprise-grade access control and centralized authorization",
@@ -1005,9 +1002,9 @@ console.log('Ahoy, changelog!', histories.length);
         src: "jira-admin-2.png",
         alt: "Site administration - authorize projects screenshot",
         caption:
-          "Site admin authorization — authorize or bulk-manage projects for the Issue Change Log app from the Issue Change Log Settings page.",
+          "Site admin authorization — authorize or bulk-manage projects for the Advanced Work Item Log app from the Advanced Work Item Log Settings page.",
         description:
-          "This screenshot shows the site administration 'Issue Change Log Settings' page where a Jira administrator can search, select, and authorize projects for the app. The list displays project keys and names with checkboxes for bulk selection, alongside controls to add or remove projects and a summary of currently authorized projects, enabling centralized and auditable management of which projects may use the Issue Change Log.",
+          "This screenshot shows the site administration 'Advanced Work Item Log Settings' page where a Jira administrator can search, select, and authorize projects for the app. The list displays project keys and names with checkboxes for bulk selection, alongside controls to add or remove projects and a summary of currently authorized projects, enabling centralized and auditable management of which projects may use the Advanced Work Item Log.",
       },
       {
         type: "heading",
@@ -1017,7 +1014,7 @@ console.log('Ahoy, changelog!', histories.length);
       {
         type: "text",
         content:
-          "Navigate to Jira Settings → Apps → Issue Change Log → Site Administrator Configuration.",
+          "Navigate to Jira Settings → Apps → Advanced Work Item Log → Site Administrator Configuration.",
       },
       {
         type: "list",
@@ -1043,7 +1040,7 @@ console.log('Ahoy, changelog!', histories.length);
           </div>
           <div class="info-text">
             <p>
-              Note: Only Jira site administrators can access and configure this panel. Without site-level authorization, the Issue Change Log app will not appear in the project’s Issue panel.
+              Note: Only Jira site administrators can access and configure this panel. Without site-level authorization, the Advanced Work Item Log app will not appear in the project’s Issue panel.
             </p>
           </div>
         </div>
@@ -1063,7 +1060,7 @@ console.log('Ahoy, changelog!', histories.length);
       /* {
         type: "text",
         content:
-          "The **Authorized Projects Management** section allows Jira administrators to view and control which projects have access to the **Issue Change Log** app. It lists each project’s name, key, ID, and authorization date, with options to remove access individually or in bulk using the **Remove Selected** action. This centralized control ensures clear visibility, efficient permission management, and easy updates as organizational needs evolve.",
+          "The **Authorized Projects Management** section allows Jira administrators to view and control which projects have access to the **Advanced Work Item Log** app. It lists each project’s name, key, ID, and authorization date, with options to remove access individually or in bulk using the **Remove Selected** action. This centralized control ensures clear visibility, efficient permission management, and easy updates as organizational needs evolve.",
       },*/ {
         type: "html",
         content: `
@@ -1074,7 +1071,7 @@ console.log('Ahoy, changelog!', histories.length);
           </div>
           <div class="content-text">
             <h3 class="content-heading">Authorized Projects Management</h3>
-            <p>The <strong>Authorized Projects Management</strong> section allows Jira administrators to view and control which projects have access to the <strong>Issue Change Log</strong> app. It lists each project's name, key, ID, and authorization date, with options to remove access individually or in bulk using the <strong>Remove Selected</strong> action. This centralized control ensures clear visibility, efficient permission management, and easy updates as organizational needs evolve.</p>
+            <p>The <strong>Authorized Projects Management</strong> section allows Jira administrators to view and control which projects have access to the <strong>Advanced Work Item Log</strong> app. It lists each project's name, key, ID, and authorization date, with options to remove access individually or in bulk using the <strong>Remove Selected</strong> action. This centralized control ensures clear visibility, efficient permission management, and easy updates as organizational needs evolve.</p>
           </div>
         </div>
         `,
@@ -1089,11 +1086,11 @@ console.log('Ahoy, changelog!', histories.length);
         <div class="content-with-image reverse">
           <div class="content-text">
             <h4 class="content-heading" style="font-weight: bold;">Project Authorization Success</h4>
-            <p>When projects are successfully added to the authorization list, users will see a green confirmation message indicating how many projects were added. This immediate feedback confirms that the selected projects now have access to the Issue Change Log app and can begin using its features once enabled at the project level.</p>
+            <p>When projects are successfully added to the authorization list, users will see a green confirmation message indicating how many projects were added. This immediate feedback confirms that the selected projects now have access to the Advanced Work Item Log app and can begin using its features once enabled at the project level.</p>
           </div>
           <div class="image-with-expand">
-            <img src="jira-admin-5.jpg" alt="Issue Change Log Settings - Successfully added projects confirmation" style="border: 1px solid #0052CC; border-radius: 8px;" onerror="this.outerHTML='<div style=\'padding:80px;text-align:center;background:#f4f5f7;color:#6b778c;\'>Image placeholder</div>'" />
-            <button class="expand-icon" onclick="openImageModal('jira-admin-5.jpg', 'Issue Change Log Settings - Successfully added projects confirmation')" aria-label="Expand image">⤢</button>
+            <img src="jira-admin-5.jpg" alt="Advanced Work Item Log Settings - Successfully added projects confirmation" style="border: 1px solid #0052CC; border-radius: 8px;" onerror="this.outerHTML='<div style=\'padding:80px;text-align:center;background:#f4f5f7;color:#6b778c;\'>Image placeholder</div>'" />
+            <button class="expand-icon" onclick="openImageModal('jira-admin-5.jpg', 'Advanced Work Item Log Settings - Successfully added projects confirmation')" aria-label="Expand image">⤢</button>
           </div>
         </div>
         `,
@@ -1111,7 +1108,7 @@ console.log('Ahoy, changelog!', histories.length);
             lineTo: { x: 30, y: 24 },
             tooltipTitle: "Project Name",
             tooltipDescription:
-              "The name of the project that has been authorized to use the Issue Change Log app.",
+              "The name of the project that has been authorized to use the Advanced Work Item Log app.",
           },
           {
             number: "2",
@@ -1174,7 +1171,7 @@ console.log('Ahoy, changelog!', histories.length);
       {
         type: "text",
         content:
-          "Once a project has been authorized at the site level, project administrators can manage the app's enablement for their specific project. The project settings provide a simple interface to enable or disable the Issue Change Log app, giving project-level control over the feature's availability.",
+          "Once a project has been authorized at the site level, project administrators can manage the app's enablement for their specific project. The project settings provide a simple interface to enable or disable the Advanced Work Item Log app, giving project-level control over the feature's availability.",
       },
       {
         type: "image",
@@ -1204,7 +1201,7 @@ console.log('Ahoy, changelog!', histories.length);
       {
         type: "text",
         content:
-          "The Issue Panel displays the app's availability state for a given issue, providing clear visual feedback to users about the current access status. This two-state system ensures users understand exactly why they can or cannot access the Issue Change Log functionality.",
+          "The Issue Panel displays the app's availability state for a given issue, providing clear visual feedback to users about the current access status. This two-state system ensures users understand exactly why they can or cannot access the Advanced Work Item Log functionality.",
       },
       {
         type: "text",
@@ -1262,14 +1259,14 @@ console.log('Ahoy, changelog!', histories.length);
       {
         type: "text",
         content:
-          "When the app is **properly authorized and enabled**, users see the complete Issue Change Log interface with a comprehensive table showing **WHO changed**, **WHAT changed**, and **WHEN changed**. The interface includes filterable columns for Author, Field/Content, From, To, and Date with dropdown filters for each column.",
+          "When the app is **properly authorized and enabled**, users see the complete Advanced Work Item Log interface with a comprehensive table showing **WHO changed**, **WHAT changed**, and **WHEN changed**. The interface includes filterable columns for Author, Field/Content, From, To, and Date with dropdown filters for each column.",
       },
       {
         type: "image",
         src: "feature-1.png",
-        alt: "Issue Change Log main interface with WHO/WHAT/WHEN columns",
+        alt: "Advanced Work Item Log main interface with WHO/WHAT/WHEN columns",
         caption:
-          "Main Issue Change Log interface showing changelog table with filtering options and change history data.",
+          "Main Advanced Work Item Log interface showing changelog table with filtering options and change history data.",
       },
       {
         type: "heading",
@@ -1371,38 +1368,37 @@ console.log('Ahoy, changelog!', histories.length);
 
   installation: {
     breadcrumbs: [
-      { title: "Issue Change Log", link: "#" },
+      { title: "Advanced Work Item Log", link: "#" },
       { title: "Installation", link: "#" },
     ],
     title: "Installation Guide",
     description:
-      "This guide will walk you through the complete installation process for the Issue Change Log app.",
+      "This guide will walk you through the complete installation process for the Advanced Work Item Log app.",
     sections: [
       { type: "heading", level: 2, content: "Prerequisites" },
       {
         type: "text",
-        content: "Before installing the Issue Change Log app, ensure you have:",
+        content:
+          "Before installing the Advanced Work Item Log app, ensure you have:",
       },
-      { type: "heading", level: 3, content: "System Requirements" },
-      {
-        type: "html",
-        content: `
-          <ul class="tab-item-benefits">
-            <li>✅ Active Jira Cloud instance</li>
-            <li>✅ Jira administrator privileges (for installation and initial setup)</li>
-          </ul>
-        `,
-      },
-      { type: "heading", level: 3, content: "User Permissions" },
+      { type: "heading", level: 2, content: "System Requirements" },
       {
         type: "list",
         items: [
-          "<strong>For Installation:</strong> site administrator role or org admin role",
-          "<strong>For Site Configuration:</strong> Member of the site-admins, jira-administrators, or the administrators group",
-          "<strong>For Project Configuration:</strong> Project administrator role for specific projects",
+          "Active Jira Cloud instance",
+          "Jira administrator privileges (for installation and initial setup)",
         ],
       },
-      { type: "heading", level: 3, content: "Browser Requirements" },
+      { type: "heading", level: 2, content: "User Permissions" },
+      {
+        type: "list",
+        items: [
+          "For Installation: site administrator role or org admin role",
+          "For Site Configuration: Member of the site-admins, jira-administrators, or the administrators group",
+          "For Project Configuration: Project administrator role for specific projects",
+        ],
+      },
+      { type: "heading", level: 2, content: "Browser Requirements" },
       {
         type: "list",
         items: ["Chrome 90+", "Firefox 88+", "Safari 14+", "Edge 90+"],
@@ -1416,28 +1412,28 @@ console.log('Ahoy, changelog!', histories.length);
       },
       {
         type: "heading",
-        level: 3,
+        level: 2,
         content: "Navigate to Atlassian Marketplace",
       },
       {
-        type: "text",
+        type: "html",
         content:
-          "Go to <a href='https://marketplace.atlassian.com' target='_blank'>Explore Marketplace solutions for Atlassian apps | Atlassian Marketplace</a>",
+          "<p><a href='https://marketplace.atlassian.com' target='_blank' style='color: #0052CC; text-decoration: none; font-weight: 500;'>🔗 Open Atlassian Marketplace</a></p>",
       },
       {
         type: "text",
-        content: "Sign in with your Atlassian account",
+        content: "Sign in with your Atlassian account once the page opens",
       },
-      { type: "heading", level: 3, content: "Search for the App" },
+      { type: "heading", level: 2, content: "Search for the App" },
       {
         type: "text",
-        content: 'Search for "Issue Change Log" in the marketplace',
+        content: 'Search for "Advanced Work Item Log" in the marketplace',
       },
       {
         type: "text",
         content: "Click on the app to view details",
       },
-      { type: "heading", level: 3, content: "Install the App" },
+      { type: "heading", level: 2, content: "Install the App" },
       {
         type: "text",
         content: 'Click the "Get it now" or "Try it free" button',
@@ -1450,7 +1446,7 @@ console.log('Ahoy, changelog!', histories.length);
         type: "text",
         content: 'Click "Install app"',
       },
-      { type: "heading", level: 3, content: "Grant Permissions" },
+      { type: "heading", level: 2, content: "Grant Permissions" },
       {
         type: "text",
         content: "Review the requested permissions:",
@@ -1458,16 +1454,16 @@ console.log('Ahoy, changelog!', histories.length);
       {
         type: "list",
         items: [
-          "<code>read:jira-work</code> - Read Jira issues and projects",
-          "<code>read:jira-user</code> - Read user information",
-          "<code>storage:app</code> - Store app configuration data",
+          "read:jira-work - Read Jira issues and projects",
+          "read:jira-user - Read user information",
+          "storage:app - Store app configuration data",
         ],
       },
       {
         type: "text",
         content: 'Click "Grant access"',
       },
-      { type: "heading", level: 3, content: "Confirm Installation" },
+      { type: "heading", level: 2, content: "Confirm Installation" },
       {
         type: "text",
         content: "Wait for the installation to complete",
@@ -1493,12 +1489,12 @@ console.log('Ahoy, changelog!', histories.length);
 
   configuration: {
     breadcrumbs: [
-      { title: "Issue Change Log", link: "#" },
+      { title: "Advanced Work Item Log", link: "#" },
       { title: "User Guide", link: "#" },
     ],
     title: "User Guide",
     description:
-      "Site- and project-level configuration for Issue ChangeLog, plus performance tuning and troubleshooting guidance.",
+      "Site- and project-level configuration for Advanced Work Item Log, plus performance tuning and troubleshooting guidance.",
     sections: [
       {
         type: "heading",
@@ -1508,21 +1504,21 @@ console.log('Ahoy, changelog!', histories.length);
       {
         type: "text",
         content:
-          "Issue ChangeLog uses a two-tier access model: site-level authorization (Jira admins) and project-level enablement (project admins). Both must be true before users can view change logs in issue panels.",
+          "Advanced Work Item Log uses a two-tier access model: site-level authorization (Jira admins) and project-level enablement (project admins). Both must be true before users can view change logs in issue panels.",
       },
       {
         type: "image",
         src: "jira-admin-1.png",
         alt: "Jira admin - manage apps and authorize projects",
         caption:
-          "Site admin console — authorize projects that can use Issue ChangeLog.",
+          "Site admin console — authorize projects that can use Advanced Work Item Log.",
       },
       {
         type: "image",
         src: "jira-admin-2.png",
-        alt: "Issue ChangeLog settings - authorize projects screenshot",
+        alt: "Advanced Work Item Log settings - authorize projects screenshot",
         caption:
-          "Manage projects from Issue ChangeLog Settings (search, select, bulk-add).",
+          "Manage projects from Advanced Work Item Log Settings (search, select, bulk-add).",
       },
       {
         type: "html",
@@ -1538,7 +1534,7 @@ console.log('Ahoy, changelog!', histories.length);
       {
         type: "text",
         content:
-          "From Jira Settings → Apps → Manage apps → Issue ChangeLog Settings, search and select the projects to authorize. Use 'Select All' for bulk authorization when appropriate.",
+          "From Jira Settings → Apps → Manage apps → Advanced Work Item Log Settings, search and select the projects to authorize. Use 'Select All' for bulk authorization when appropriate.",
       },
       {
         type: "image",
@@ -1564,7 +1560,7 @@ console.log('Ahoy, changelog!', histories.length);
       {
         type: "text",
         content:
-          "Project administrators can enable Issue ChangeLog per project in Project Settings → Apps. Toggling the switch makes the panel available to project users if the project is also site-authorized.",
+          "Project administrators can enable Advanced Work Item Log per project in Project Settings → Apps. Toggling the switch makes the panel available to project users if the project is also site-authorized.",
       },
       {
         type: "image",
@@ -1703,12 +1699,12 @@ console.log('Ahoy, changelog!', histories.length);
 
   troubleshooting: {
     breadcrumbs: [
-      { title: "Issue Change Log", link: "#" },
+      { title: "Advanced Work Item Log", link: "#" },
       { title: "Troubleshooting", link: "#" },
     ],
     title: "Troubleshooting",
     description:
-      "Quick diagnosis and actionable steps for common admin- and user-facing issues when the Issue Change Log app does not appear or behaves unexpectedly.",
+      "Quick diagnosis and actionable steps for common admin- and user-facing issues when the Advanced Work Item Log app does not appear or behaves unexpectedly.",
     sections: [
       {
         type: "html",
@@ -1748,7 +1744,7 @@ console.log('Ahoy, changelog!', histories.length);
 
   support: {
     breadcrumbs: [
-      { title: "Issue Change Log", link: "#" },
+      { title: "Advanced Work Item Log", link: "#" },
       { title: "Support", link: "#" },
     ],
     title: "Support and Contact Information",
@@ -1790,7 +1786,7 @@ console.log('Ahoy, changelog!', histories.length);
 
   security: {
     breadcrumbs: [
-      { title: "Issue Change Log", link: "#" },
+      { title: "Advanced Work Item Log", link: "#" },
       { title: "Security", link: "#" },
     ],
     title: "Security and Privacy",
@@ -1841,7 +1837,7 @@ console.log('Ahoy, changelog!', histories.length);
 
   privacy: {
     breadcrumbs: [
-      { title: "Issue Change Log", link: "#" },
+      { title: "Advanced Work Item Log", link: "#" },
       { title: "Privacy Policy", link: "#" },
     ],
     title: "Privacy Policy",
