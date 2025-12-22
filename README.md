@@ -1,6 +1,6 @@
-# K15t Documentation Page Recreation
+# Advanced Work Item Log Documentation
 
-This project recreates the K15t Scroll PDF Exporter documentation page using HTML, CSS, and JavaScript with a modular data structure.
+This project provides comprehensive documentation for the Advanced Work Item Log application for Jira Cloud.
 
 ## Files Structure
 
@@ -30,6 +30,12 @@ This project recreates the K15t Scroll PDF Exporter documentation page using HTM
 - Breadcrumb navigation
 - Table of contents with scroll spy
 
+✅ **Search Functionality**
+
+- Quick search across all documentation
+- Keyboard shortcut support (press '/')
+- Real-time results filtering
+
 ✅ **Modern UI**
 
 - Clean, professional design
@@ -43,6 +49,17 @@ This project recreates the K15t Scroll PDF Exporter documentation page using HTM
 2. **Customize content**: Edit `data.js` to change navigation items, page content, and text
 3. **Style adjustments**: Modify `styles.css` for design changes
 4. **Functionality**: Update `script.js` for behavior modifications
+
+## Documentation Sections
+
+- **Advanced Work Item Log** - Main landing page
+- **Get Started** - Overview and introduction
+- **Features and Capabilities** - Detailed feature documentation
+- **Installation Guide** - Step-by-step installation instructions
+- **Troubleshooting** - Common issues and solutions
+- **User Guide** - Configuration and usage instructions
+- **Support** - Contact information and support resources
+- **Security and Privacy** - Security policies and data handling
 
 ## Customizing Content
 
@@ -65,19 +82,22 @@ const navigationData = {
 
 ### Page Content
 
-Edit the `pageContent` object in `data.js`:
+Edit the `sectionContents` object in `data.js`:
 
 ```javascript
-const pageContent = {
-  breadcrumbs: [...],
-  title: 'Page Title',
-  description: 'Page description',
-  sections: [
-    { type: 'info-box', title: '...', content: '...' },
-    { type: 'text', content: '...' },
-    { type: 'image', src: '...', alt: '...' }
-  ],
-  tableOfContents: [...]
+const sectionContents = {
+  "section-id": {
+    breadcrumbs: [...],
+    title: 'Page Title',
+    description: 'Page description',
+    sections: [
+      { type: 'info-box', title: '...', content: '...' },
+      { type: 'text', content: '...' },
+      { type: 'image', src: '...', alt: '...' }
+    ],
+    tableOfContents: [...],
+    navigation: { previous: {...}, next: {...} }
+  }
 };
 ```
 
@@ -91,10 +111,10 @@ const headerNav = [{ title: "Link Title", link: "#" }];
 
 ## Browser Support
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+- Chrome 90+
+- Firefox 88+
+- Safari 14+
+- Edge 90+
 
 ## Responsive Breakpoints
 
@@ -112,6 +132,11 @@ The page uses CSS custom properties for easy theme customization:
 - Light Background: `#F4F5F7`
 - Info Blue: `#DEEBFF`
 
+## Version
+
+Current Version: 2.5.0
+
 ## License
 
-This is a recreation for educational/demonstration purposes.
+Documentation for Advanced Work Item Log application.
+
